@@ -16,7 +16,7 @@
 
 .slider {
     position: absolute;
-    inset: 40px 240px 40px 80px;
+    inset: 60px 240px 60px 80px;
     /* inset: 0 0 0 0; */
     border-radius: 20px;
     background: #ccc;
@@ -82,4 +82,41 @@
     left: calc(50% + 1840px);
     background-size: cover;
     opacity: 0;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+.buttons span {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #111;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.buttons span::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-top: 4px solid #fff;
+    border-left: 4px solid #fff;
+    transform: rotate(315deg) translate(2px, 2px);
+}
+
+.buttons span:nth-child(2):before {
+    transform: rotate(135deg) translate(2px, 2px);
+}
+
+.buttons span:active {
+    opacity: 0.5;
 }
